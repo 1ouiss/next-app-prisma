@@ -6,11 +6,11 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
-  const id = params.id;
+  const id = +params.id;
 
   const post = await prisma.post.findUnique({
     where: {
-      id: Number(id),
+      id: id,
     },
   });
   return NextResponse.json({
