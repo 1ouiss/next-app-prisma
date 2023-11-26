@@ -1,5 +1,13 @@
 export interface IPost {
-  id: number;
+  id?: number;
   title: string;
-  body: string;
+  content: string;
+  category?: ICategory;
+  categoryId?: number;
+}
+
+export interface ICategory {
+  id?: number;
+  name: string;
+  posts?: IPost[];
 }
