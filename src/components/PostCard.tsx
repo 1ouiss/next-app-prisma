@@ -35,9 +35,6 @@ const PostCard = ({ post, handleDelete }: Props) => {
         >
           Supprimer
         </Button>
-        <Button size="small" color="warning">
-          Modifier
-        </Button>
       </CardActions>
     </Card>
   );

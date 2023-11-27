@@ -58,9 +58,6 @@ const CategoriesList = () => {
                 >
                   Delete
                 </Button>
-                <Button color="warning" onClick={() => console.log("update")}>
-                  Update
-                </Button>
               </Stack>
             );
           })
