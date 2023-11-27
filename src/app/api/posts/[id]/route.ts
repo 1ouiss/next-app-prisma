@@ -12,6 +12,9 @@ export async function GET(
     where: {
       id: id,
     },
+    include: {
+      category: true,
+    },
   });
   return NextResponse.json({
     data: post,

@@ -15,14 +15,13 @@ const PostsList = () => {
     fetchAllPosts();
   }, []);
   const fetchAllPosts = async () => {
-    const response = await fetch("http://localhost:3000/api/posts");
+    const response = await fetch("/api/posts");
     const data = await response.json();
-    //   console.log(data);
     setPosts(data.data);
   };
 
   const handleDeletePost = async (id: number) => {
-    const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
       method: "DELETE",
     });
     const data = await response.json();
